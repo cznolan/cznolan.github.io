@@ -3,9 +3,9 @@ title: cznolan
 #description: >- TBD
 #  TBD
 #  TBD
-baseurl: ""
-url: ""
+#baseurl: ""
+#url: ""
 github_username: cznolan
 theme: jekyll-theme-minimal
-exclude:
-  - README.md
+#exclude:
+#  - README.md
