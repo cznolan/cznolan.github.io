@@ -7,5 +7,6 @@ title: cznolan
 #url: ""
 github_username: cznolan
 theme: jekyll-theme-minimal
+input: GFM
 #exclude:
 #  - README.md
