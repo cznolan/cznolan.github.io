@@ -1,8 +1,9 @@
 ---
 layout: post
-title:  "ASR9901 Upgrade Guide"
-date:   2020-09-07 20:45:00 +0800
-categories: IOS XR
+title: "ASR9901 Upgrade Guide"
+date: 2020-09-07 20:45:00 +0800
+tags: "IOS XR"
+author: cznolan
 ---
 I recently deployed several Cisco ASR9901 routers and have realised that a lot of the information on IOS XR platforms is in limbo between the older 32-bit QNX-based version of the operating system, and the newer 64-bit Wind River Linux-based version. I thought it might be helpful to publish an up-to-date IOS XR upgrade guide to help people who are navigating IOS XR for the first time.
 
