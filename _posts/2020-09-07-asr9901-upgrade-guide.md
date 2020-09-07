@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "ASR9901 Upgrade Guide"
-date:   2020-07-09 20:45:00 +0800
+date:   2020-09-07 20:45:00 +0800
 categories: IOS XR
 ---
 # ASR9901 Upgrade Guide
