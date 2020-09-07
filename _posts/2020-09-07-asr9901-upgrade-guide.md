@@ -164,7 +164,7 @@ Once you have performed your verification steps of the new software version, you
 
 ### FPD Upgrade
 
-Now that you have *committed* to the new software and package versions, you need to verify that the FPDs are all running a compatible version of software.
+Now that you have *committed* to the new software and package versions, you need to verify that the FPDs are all running a compatible version of software. These are Field Programmable Devices such as FPGAs, and these updates ensure that the software and hardware maintain a high level of compatibility.
 
     show hw-module fpd
 
