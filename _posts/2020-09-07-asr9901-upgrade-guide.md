@@ -207,13 +207,13 @@ If you find that the **show hw-module fpd** command shows the modules as CURRENT
     --------------------------------------------------------------------------------
     System Scoped Active Alarms 
     --------------------------------------------------------------------------------
-    Location        Severity     Group            Set Time                   Description                                                                                                                                                                                                                                                
+    Location        Severity     Group            Set Time                   Description
     --------------------------------------------------------------------------------
-    0/RSP0          Major        FPD_Infra        07/15/2020 11:07:44 AWST   IPU-FPGA: Golden FPGA is below minimum version, Perform force fpd upgrade                                                                                                                                                                                  
-    0/RSP0          Major        FPD_Infra        07/15/2020 11:07:44 AWST   IPU-FSBL: Golden FPGA is below minimum version, Perform force fpd upgrade                                                                                                                                                                                  
-    0/RSP0          Major        FPD_Infra        07/15/2020 11:07:44 AWST   IPU-Linux: Golden FPGA is below minimum version, Perform force fpd upgrade                                                                                                                                                                                 
-    0/0             Major        FPD_Infra        02/06/2020 15:19:51 AWST   IPU-FPGA: Golden FPGA is below minimum version, Perform force fpd upgrade                                                                                                                                                                                  
-    0/0             Major        FPD_Infra        02/06/2020 15:19:51 AWST   IPU-FSBL: Golden FPGA is below minimum version, Perform force fpd upgrade                                                                                                                                                                                  
+    0/RSP0          Major        FPD_Infra        07/15/2020 11:07:44 AWST   IPU-FPGA: Golden FPGA is below minimum version, Perform force fpd upgrade
+    0/RSP0          Major        FPD_Infra        07/15/2020 11:07:44 AWST   IPU-FSBL: Golden FPGA is below minimum version, Perform force fpd upgrade
+    0/RSP0          Major        FPD_Infra        07/15/2020 11:07:44 AWST   IPU-Linux: Golden FPGA is below minimum version, Perform force fpd upgrade
+    0/0             Major        FPD_Infra        02/06/2020 15:19:51 AWST   IPU-FPGA: Golden FPGA is below minimum version, Perform force fpd upgrade
+    0/0             Major        FPD_Infra        02/06/2020 15:19:51 AWST   IPU-FSBL: Golden FPGA is below minimum version, Perform force fpd upgrade
     0/0             Major        FPD_Infra        02/06/2020 15:19:51 AWST   IPU-Linux: Golden FPGA is below minimum version, Perform force fpd upgrade
 
 ### Cleanup
