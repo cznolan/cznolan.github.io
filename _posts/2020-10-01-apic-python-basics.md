@@ -36,7 +36,7 @@ requests.packages.urllib3.disable_warnings(InsecureRequestWarning)
 
 I see no reason to re-invent the wheel here. Cisco has a clear and concise piece of Python code here that tells you exactly how to interact with the APIC.
 
-[](https://www.cisco.com/c/en/us/td/docs/switches/datacenter/aci/apic/sw/1-x/api/rest/b_APIC_RESTful_API_User_Guide/using_tools_for_api_development_and_testing.pdf)
+[https://www.cisco.com/c/en/us/td/docs/switches/datacenter/aci/apic/sw/1-x/api/rest/b_APIC_RESTful_API_User_Guide/using_tools_for_api_development_and_testing.pdf](https://www.cisco.com/c/en/us/td/docs/switches/datacenter/aci/apic/sw/1-x/api/rest/b_APIC_RESTful_API_User_Guide/using_tools_for_api_development_and_testing.pdf)
 
 The only thing I will do above what is in the PDF is define the username and passwords as variables. I have also sanitised the APIC Sandbox FQDN and credentials, as while they are readily available through a Google search today, I am not sure if Cisco will restrict it in future.
 
@@ -314,13 +314,11 @@ I recommend you take a look at the below resources when trying to work with the 
 
 To both optimise your queries and ensure that the data you are looking for is returned, it is good to understand the query filtering/scoping expressions that can be appended to the query URL. Examples and descriptions of the query filters can be found in the configuration guide.
 
-https://www.cisco.com/c/en/us/td/docs/switches/datacenter/aci/apic/sw/4-x/rest-api-config/Cisco-APIC-REST-API-Configuration-Guide-42x/m_using_the_rest_api.html
+[https://www.cisco.com/c/en/us/td/docs/switches/datacenter/aci/apic/sw/4-x/rest-api-config/Cisco-APIC-REST-API-Configuration-Guide-42x/m_using_the_rest_api.html](https://www.cisco.com/c/en/us/td/docs/switches/datacenter/aci/apic/sw/4-x/rest-api-config/Cisco-APIC-REST-API-Configuration-Guide-42x/m_using_the_rest_api.html)
 
 ### APIC Object Store Browser
 
-The Object Store Browser allows you to explore the APIC Management Information Tree (MIT) and browse through all the objects that you can interact with using the REST API. The tool is accessed by simply appending _/visore.html_ to the APIC URL.
-
-https://apic/visore.html
+The Object Store Browser allows you to explore the APIC Management Information Tree (MIT) and browse through all the objects that you can interact with using the REST API. The tool is accessed by simply appending _/visore.html_ to the APIC URL, for example https://apic/visore.html
 
 You can also get to Visore by clicking on the cog wheel at the top-right corner of the APIC web GUI, and selecting "Object Store Browser".
 
@@ -334,4 +332,4 @@ To access the API Explorer, click on the cog wheel at the top-right corner of th
 
 Cisco DevNet has lots of great information and resources, including free Sandbox environments, follow-along labs, and links to GitHub repos with code examples.
 
-https://developer.cisco.com/
+[https://developer.cisco.com/](https://developer.cisco.com/)
