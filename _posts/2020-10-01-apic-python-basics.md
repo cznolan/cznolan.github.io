@@ -36,7 +36,7 @@ requests.packages.urllib3.disable_warnings(InsecureRequestWarning)
 
 I see no reason to re-invent the wheel here. Cisco has a clear and concise piece of Python code here that tells you exactly how to interact with the APIC.
 
-https://www.cisco.com/c/en/us/td/docs/switches/datacenter/aci/apic/sw/1-x/api/rest/b_APIC_RESTful_API_User_Guide/using_tools_for_api_development_and_testing.pdf
+[](https://www.cisco.com/c/en/us/td/docs/switches/datacenter/aci/apic/sw/1-x/api/rest/b_APIC_RESTful_API_User_Guide/using_tools_for_api_development_and_testing.pdf)
 
 The only thing I will do above what is in the PDF is define the username and passwords as variables. I have also sanitised the APIC Sandbox FQDN and credentials, as while they are readily available through a Google search today, I am not sure if Cisco will restrict it in future.
 
