@@ -7,10 +7,5 @@ title: cznolan
 #url: ""
 github_username: cznolan
 theme: jekyll-theme-minimal
-
-markdown: kramdown
-kramdown:
-  input: GFM
-  syntax_highlighter: rouge
 #exclude:
 #  - README.md
