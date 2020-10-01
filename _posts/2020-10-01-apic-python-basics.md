@@ -23,14 +23,14 @@ The REST API can return data in JSON or XML format. Due to personal preference t
 ### Python Modules
 
 At a minimum you will need the __json__ and __requests__ modules. I also recommend using __pprint__ to neatly observe the JSON output, as well as disabling validation of the APIC certificate.
-```python
+{% highlight python %}
 import json
 import requests
 import pprint
 from requests.packages.urllib3.exceptions import InsecureRequestWarning
 
 requests.packages.urllib3.disable_warnings(InsecureRequestWarning)
-```
+{% endhighlight %}
 
 ### Authentication
 
