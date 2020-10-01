@@ -300,6 +300,7 @@ print(post_response)
 ```
 
 Example output:
+
 You will simply get a HTTP 200 response if the operation is valid.
 
 ```
