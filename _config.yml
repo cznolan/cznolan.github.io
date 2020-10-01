@@ -7,7 +7,7 @@ title: cznolan
 #url: ""
 github_username: cznolan
 theme: jekyll-theme-minimal
-highlighter: rouge
+
 markdown: kramdown
 kramdown:
   input: GFM
