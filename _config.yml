@@ -8,5 +8,6 @@ title: cznolan
 github_username: cznolan
 theme: jekyll-theme-minimal
 input: GFM
+highlighter: rouge
 #exclude:
 #  - README.md
