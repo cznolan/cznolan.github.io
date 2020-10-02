@@ -3,8 +3,8 @@
 body {
   background-color: #fff;
   padding:50px;
-  font: 14px/1.5 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Fira Sans", "Droid Sans", "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
-  color:#595959;
+  font: 14px/1.5 "Noto Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  color:#727272;
   font-weight:400;
 }
 
@@ -23,26 +23,24 @@ h1, h2, h3 {
 
 h1 {
   font-size:28px;
-  font-weight: 500;
 }
 
 h2 {
   color:#393939;
-  font-weight: 500;
 }
 
 h3, h4, h5, h6 {
   color:#494949;
-  font-weight: 500;
 }
 
 a {
-  color:#39c;
+  color:#267CB9;
   text-decoration:none;
 }
 
-a:hover {
+a:hover, a:focus {
   color:#069;
+  font-weight: bold;
 }
 
 a small {
@@ -57,7 +55,7 @@ a:hover small {
 }
 
 .wrapper {
-  max-width:1360px;
+  width:860px;
   margin:0 auto;
 }
 
@@ -94,7 +92,7 @@ th, td {
 
 dt {
   color:#444;
-  font-weight:500;
+  font-weight:700;
 }
 
 th {
@@ -112,7 +110,7 @@ header {
   -webkit-font-smoothing:subpixel-antialiased;
 }
 
-header ul {
+ul.downloads {
   list-style:none;
   height:40px;
   padding:0;
@@ -122,57 +120,58 @@ header ul {
   width:270px;
 }
 
-header li {
+.downloads li {
   width:89px;
   float:left;
   border-right:1px solid #e0e0e0;
   height:40px;
 }
 
-header li:first-child a {
+.downloads li:first-child a {
   border-radius:5px 0 0 5px;
 }
 
-header li:last-child a {
+.downloads li:last-child a {
   border-radius:0 5px 5px 0;
 }
 
-header ul a {
+.downloads a {
   line-height:1;
   font-size:11px;
-  color:#999;
+  color:#676767;
   display:block;
   text-align:center;
   padding-top:6px;
   height:34px;
 }
 
-header ul a:hover {
-  color:#999;
+.downloads a:hover, .downloads a:focus {
+  color:#675C5C;
+  font-weight:bold;
 }
 
-header ul a:active {
+.downloads ul a:active {
   background-color:#f0f0f0;
 }
 
 strong {
   color:#222;
-  font-weight:500;
+  font-weight:700;
 }
 
-header ul li + li + li {
+.downloads li + li + li {
   border-right:none;
   width:89px;
 }
 
-header ul a strong {
+.downloads a strong {
   font-size:14px;
   display:block;
   color:#222;
 }
 
 section {
-  max-width:1000px;
+  width:500px;
   float:right;
   padding-bottom:50px;
 }
@@ -196,14 +195,14 @@ footer {
   -webkit-font-smoothing:subpixel-antialiased;
 }
 
-@media print, screen {
+@media print, screen and (max-width: 960px) {
 
   div.wrapper {
     width:auto;
     margin:0;
   }
 
-  header, footer {
+  header, section, footer {
     float:none;
     position:static;
     width:auto;
@@ -217,7 +216,7 @@ footer {
     border:1px solid #e5e5e5;
     border-width:1px 0;
     padding:20px 0;
-    margin:auto;
+    margin:0 0 20px;
   }
 
   header a small {
@@ -228,6 +227,38 @@ footer {
     position:absolute;
     right:50px;
     top:52px;
+  }
+}
+
+@media print, screen and (max-width: 720px) {
+  body {
+    word-wrap:break-word;
+  }
+
+  header {
+    padding:0;
+  }
+
+  header ul, header p.view {
+    position:static;
+  }
+
+  pre, code {
+    word-wrap:normal;
+  }
+}
+
+@media print, screen and (max-width: 480px) {
+  body {
+    padding:15px;
+  }
+
+  .downloads {
+    width:99%;
+  }
+
+  .downloads li, .downloads li + li + li {
+    width:33%;
   }
 }
 
