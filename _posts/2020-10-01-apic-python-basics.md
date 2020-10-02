@@ -119,7 +119,7 @@ for each in get_response.json()['imdata']:
     node_name = each['fabricNode']['attributes'].get('name')
     node_role = each['fabricNode']['attributes'].get('role')
     node_serial = each['fabricNode']['attributes'].get('serial')
-    print(node_id + ',' + node_model + ',' + node_name + ',' + node_role + ',' + node_serial)
+    print('{},{},{},{},{}'.format(node_id, node_model, node_name, node_role, node_serial))
 ```
 
 Example output:
