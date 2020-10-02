@@ -202,6 +202,8 @@ footer {
   div.wrapper {
     width:auto;
     margin:0 auto;
+    flex:none;
+    max-width:100%
   }
 
   header, section, footer {
@@ -219,7 +221,6 @@ footer {
     border-width:1px 0;
     padding:20px 0;
     margin:0 0 20px;
-    max-width:100%;
   }
 
   header a small {
