@@ -78,7 +78,7 @@ pprint.pprint(get_response.json())
 
 Example output:
 
-```json
+```
 {'imdata': [{'fvTenant': {'attributes': {'annotation': '',
                                          'childAction': '',
                                          'descr': '',
