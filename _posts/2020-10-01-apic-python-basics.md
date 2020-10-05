@@ -70,7 +70,7 @@ cookies['APIC-Cookie'] = auth_token
 
 The following are some basic examples of read and write operations against the APIC REST API. The example code should be combined with the above module import and authentication sections.
 
-If you want to see the raw JSON output returned from the HTTP GET request (using __requests.get__), I recommend using __pprint__ as follows.
+If you want to see the raw JSON output returned from the HTTP GET request (which is immediately after you have used __requests.get__), I recommend using __pprint__ as follows.
 
 ```python
 pprint.pprint(get_response.json())
