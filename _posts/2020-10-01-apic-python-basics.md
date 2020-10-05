@@ -70,6 +70,88 @@ cookies['APIC-Cookie'] = auth_token
 
 The following are some basic examples of read and write operations against the APIC REST API. The example code should be combined with the above module import and authentication sections.
 
+If you want to see the raw JSON output returned from the HTTP GET request (using __requests.get__), I recommend using __pprint__ as follows.
+
+```python
+pprint.pprint(get_response.json())
+```
+
+Example output:
+
+```json
+{'imdata': [{'fvTenant': {'attributes': {'annotation': '',
+                                         'childAction': '',
+                                         'descr': '',
+                                         'dn': 'uni/tn-infra',
+                                         'extMngdBy': '',
+                                         'lcOwn': 'local',
+                                         'modTs': '2020-10-05T01:04:27.379+00:00',
+                                         'monPolDn': 'uni/tn-common/monepg-default',
+                                         'name': 'infra',
+                                         'nameAlias': '',
+                                         'ownerKey': '',
+                                         'ownerTag': '',
+                                         'status': '',
+                                         'uid': '0'}}},
+            {'fvTenant': {'attributes': {'annotation': '',
+                                         'childAction': '',
+                                         'descr': '',
+                                         'dn': 'uni/tn-mgmt',
+                                         'extMngdBy': '',
+                                         'lcOwn': 'local',
+                                         'modTs': '2020-10-05T01:04:27.572+00:00',
+                                         'monPolDn': 'uni/tn-common/monepg-default',
+                                         'name': 'mgmt',
+                                         'nameAlias': '',
+                                         'ownerKey': '',
+                                         'ownerTag': '',
+                                         'status': '',
+                                         'uid': '0'}}},
+            {'fvTenant': {'attributes': {'annotation': '',
+                                         'childAction': '',
+                                         'descr': '',
+                                         'dn': 'uni/tn-common',
+                                         'extMngdBy': '',
+                                         'lcOwn': 'local',
+                                         'modTs': '2020-10-05T01:04:20.182+00:00',
+                                         'monPolDn': 'uni/tn-common/monepg-default',
+                                         'name': 'common',
+                                         'nameAlias': '',
+                                         'ownerKey': '',
+                                         'ownerTag': '',
+                                         'status': '',
+                                         'uid': '0'}}},
+            {'fvTenant': {'attributes': {'annotation': '',
+                                         'childAction': '',
+                                         'descr': '',
+                                         'dn': 'uni/tn-Heroes',
+                                         'extMngdBy': '',
+                                         'lcOwn': 'local',
+                                         'modTs': '2020-10-05T01:07:01.652+00:00',
+                                         'monPolDn': 'uni/tn-common/monepg-default',
+                                         'name': 'Heroes',
+                                         'nameAlias': '',
+                                         'ownerKey': '',
+                                         'ownerTag': '',
+                                         'status': '',
+                                         'uid': '15374'}}},
+            {'fvTenant': {'attributes': {'annotation': '',
+                                         'childAction': '',
+                                         'descr': '',
+                                         'dn': 'uni/tn-SnV',
+                                         'extMngdBy': '',
+                                         'lcOwn': 'local',
+                                         'modTs': '2020-10-05T01:07:01.967+00:00',
+                                         'monPolDn': 'uni/tn-common/monepg-default',
+                                         'name': 'SnV',
+                                         'nameAlias': '',
+                                         'ownerKey': '',
+                                         'ownerTag': '',
+                                         'status': '',
+                                         'uid': '15374'}}},
+ 'totalCount': '5'}
+ ```
+
 ### List all tenants
 
 This will query the APIC for all the tenants, and will return the name of them all in a simple text list. The number of tenants is also derived from the __totalCount__ object.
