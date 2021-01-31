@@ -204,6 +204,8 @@ In IOS XE the YANG models need to be initialised, and from there telemetry subsc
 
 Updates can be made on-change, or periodically. Periodic updates are defined in 10ms intervals, so the below configured period of 500 is equal to 5000ms.
 
+The configuration was performed on a CSR1000v appliance running IOS XE 16.12.4a
+
 ```
 netconf-yang
 
@@ -227,6 +229,8 @@ There are a few useful commands to troubleshoot Telemetry configuration on IOS X
 ## IOS XR
 
 In IOS XR telemetry is included in the base image, and no special configuration is required to get started. The sensor group can be configured with multiple sensor paths.
+
+The configuration was performed on an IOS XRv 9000 appliance running IOS XR 7.0.1
 
 ```
 telemetry model-driven
@@ -257,6 +261,8 @@ There are a few useful commands to troubleshoot Telemetry configuration on IOS X
 ## NX-OS
 
 In NX-OS the telemetry feature first needs to be initialised. The sensor group can be configured with multiple sensor paths.
+
+The configuration was performed on a Nexus 9300v appliance running NX-OS 9.3.5
 
 ```
 feature telemetry
