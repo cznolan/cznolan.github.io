@@ -5,8 +5,6 @@ date: 2021-01-31 16:00:00 +0800
 tags: cisco model driven streaming telemetry grafana telegraf influxdb
 author: cznolan
 ---
-# Cisco Streaming Telemetry
-
 For this guide I wanted to take a look at receiving telemetry data from IOS XE, IOS XR, and NX-OS devices, in order to visualise some basic information. I have chosen to use YANG data models to collect the data, gRPC without TLS for transport, with kvGPB-encoded data transmitted to the receiver.
 
 The end result is going to be a fairly bare-bones telemetry solution, which could be improved upon in various ways such as enabling TLS encryption on various services, or filtering specific telemetry data from being stored in the database. I have left a lot of this out in order to focus on the basics of what is required to collect, receive, and visualise telemetry data.
