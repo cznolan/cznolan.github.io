@@ -31,7 +31,7 @@ sudo dnf upgrade
 
 As per the instructions on the InfluxDB website at the link below, we first want to add the InfluxData repository so that we can easily install InfluxDB.
 
-https://docs.influxdata.com/influxdb/v1.7/introduction/installation/
+[https://docs.influxdata.com/influxdb/v1.7/introduction/installation/](https://docs.influxdata.com/influxdb/v1.7/introduction/installation/){:target="_blank"}
 
 ```shell
 cat <<EOF | sudo tee /etc/yum.repos.d/influxdb.repo
@@ -136,7 +136,7 @@ The following are useful commands for basic troubleshooting of Telegraf.
 
 As per the instructions on the Grafana website at the link below, we first want to add the Grafana repository so that we can easily install Grafana.
 
-https://grafana.com/docs/grafana/latest/installation/rpm/
+[https://grafana.com/docs/grafana/latest/installation/rpm/](https://grafana.com/docs/grafana/latest/installation/rpm/){:target="_blank"}
 
 ```shell
 cat <<EOF | sudo tee /etc/yum.repos.d/grafana.repo
@@ -168,7 +168,7 @@ sudo firewall-cmd --add-port=3000/tcp --permanent
 sudo firewall-cmd --reload
 ```
 
-You can then browse to the Grafana web interface, for example http://grafana.example:3000/
+You can then browse to the Grafana web interface, for example _http://grafana.example:3000/_
 
 ### Grafana Troubleshooting
 
@@ -185,7 +185,7 @@ Much like the telemetry receiver, the devices sending telemetry must have accura
 
 The sensor paths configured on each platform can be derived from the YANG models published in this Cisco GitHub repository.
 
-https://github.com/YangModels/yang/tree/master/vendor/cisco
+[https://github.com/YangModels/yang/tree/master/vendor/cisco](https://github.com/YangModels/yang/tree/master/vendor/cisco){:target="_blank"}
 
 The sensor path can be as specific as you like. For the module _process-cpu-ios-xe-oper_, you could drill down into the container _cpu-usage_, then _cpu-utilization_ to collect several CPU statistics such as 5 second average, 1 minute average, 5 minute average etc. Or, you could specify the _one-minute_ leaf object to only collect the 1 minute average. This would be represented by the below two examples on IOS XE.
 
@@ -196,7 +196,7 @@ filter xpath /process-cpu-ios-xe-oper:cpu-usage/cpu-utilization/one-minute
 
 There is a YANG Explorer application that may be useful, however as it is unmaintained I have not bothered to test it.
 
-https://github.com/CiscoDevNet/yang-explorer
+[https://github.com/CiscoDevNet/yang-explorer](https://github.com/CiscoDevNet/yang-explorer){:target="_blank"}
 
 ## IOS XE
 
