@@ -31,7 +31,7 @@ As per the instructions on the InfluxDB website at the link below, we first want
 
 [https://docs.influxdata.com/influxdb/v1.7/introduction/installation/](https://docs.influxdata.com/influxdb/v1.7/introduction/installation/){:target="_blank"}
 
-```shell
+```
 cat <<EOF | sudo tee /etc/yum.repos.d/influxdb.repo
 [influxdb]
 name = InfluxDB Repository - RHEL \$releasever
@@ -136,7 +136,7 @@ As per the instructions on the Grafana website at the link below, we first want 
 
 [https://grafana.com/docs/grafana/latest/installation/rpm/](https://grafana.com/docs/grafana/latest/installation/rpm/){:target="_blank"}
 
-```shell
+```
 cat <<EOF | sudo tee /etc/yum.repos.d/grafana.repo
 [grafana]
 name=grafana
