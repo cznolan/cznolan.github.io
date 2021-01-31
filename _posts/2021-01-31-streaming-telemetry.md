@@ -283,7 +283,7 @@ telemetry
 
 There are a few useful commands to troubleshoot Telemetry configuration on NX-OS.
 
-* __show telemetry control database <options>__ has various options to verify sensor, receiver/destination, and subscription status.
+* __show telemetry control database__ _options_ has various options to verify sensor, receiver/destination, and subscription status.
 * __show feature | egrep telemetry__ will show whether the telemetry feature is enabled.
 * __show telemetry transport__ will show if the device has connected to the telemetry receiver for all subscriptions.
 * __show telemetry data collector details__ will show whether data has been collected successfully for all configured sensor paths.
