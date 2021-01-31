@@ -128,7 +128,7 @@ The following are useful commands for basic troubleshooting of Telegraf.
 * __sudo dnf makecache__ to download the metadata from the InfluxData repository.
 * __systemctl status telegraf__ to check the status of the Telegraf service.
 * __sudo systemctl restart telegraf__ to restart the Telegraf service. Required if you have made changes to the configuration file.
-* __telegraf --test__ to verify the configuration in the telegraf.conf file is correct.
+* __telegraf \-\-test__ to verify the configuration in the telegraf.conf file is correct.
 
 ## Grafana Config
 
