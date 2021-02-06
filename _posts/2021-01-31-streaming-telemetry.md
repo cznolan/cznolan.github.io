@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Cisco Streaming Telemetry"
+title: "Cisco Streaming Telemetry with Telegraf, InfluxDB, Grafana (TIG)"
 date: 2021-01-31 16:00:00 +0800
 tags: cisco model driven streaming telemetry grafana telegraf influxdb
 author: cznolan
