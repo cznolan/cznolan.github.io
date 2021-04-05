@@ -19,7 +19,7 @@ My setup is summarised as follows:
 
 ## Docker Host Setup
 
-For my Ubuntu Docker host the only thing I have installed during the Ubuntu setup wizard is OpenSSH server, so I will first upgrade the installed packages.
+For my Ubuntu Docker host the only package I have installed during the Ubuntu setup wizard is OpenSSH server, so I will first upgrade the installed packages.
 
 ```
 sudo apt-get update
@@ -225,7 +225,7 @@ The resulting output is that we get a folder for each group inside the GitHub Sa
 
 ![Folder Structure](/images/2021-04-05-oxidized-repo.png)
 
-And for each file in the repository there will be a commit history for each time the configuration has changed.
+And for each file in the repository there will be a commit history for each time the configuration has changed. The frequency of changes is so high in the screenshot as I reduced the backup interval to 30 seconds and made numerous changes to test.
 
 ![Configuration History](/images/2021-04-05-oxidized-history.png)
 
