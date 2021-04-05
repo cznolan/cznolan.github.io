@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Cisco Device Backup With Oxidized"
-date: 2021-04-05 19:00:00 +0800
+date: 2021-04-05 19:30:00 +0800
 tags: cisco backup oxidized xe xr nx-os ios
 author: cznolan
 ---
@@ -258,6 +258,7 @@ These are some troubleshooting steps I had to take with my deployment.
 * Make sure you haven't copied my Docker container name _competent_gould_ in your CLI commands anywhere.
 
 * When stopping the Docker container, I was unable to restart it due to Oxidized thinking it was already running. This was resolved by removing the _pid_ file manually. It seems to happen around 50% of the time.
+
 ```
 sudo rm /etc/oxidized/pid
 ```
@@ -269,6 +270,7 @@ sudo rm -rf /etc/oxidized/git/development.git
 ```
 
 * Removing the local repository once led me to encoutner the following error when trying to use the _githubrepo_ hook.
+
 ```
 ERROR -- : Hook push_to_remote (#<GithubRepo:0x000055fcfbda2138>) failed (#<Rugged::ReferenceError: cannot push non-fastforwardable reference>) for event :post_store
 ```
