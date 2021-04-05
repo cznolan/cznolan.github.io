@@ -269,7 +269,7 @@ sudo rm /etc/oxidized/pid
 sudo rm -rf /etc/oxidized/git/development.git
 ```
 
-* Removing the local repository once led me to encoutner the following error when trying to use the _githubrepo_ hook.
+* Removing the local repository once led me to encounter the following error when trying to use the _githubrepo_ hook.
 
 ```
 ERROR -- : Hook push_to_remote (#<GithubRepo:0x000055fcfbda2138>) failed (#<Rugged::ReferenceError: cannot push non-fastforwardable reference>) for event :post_store
