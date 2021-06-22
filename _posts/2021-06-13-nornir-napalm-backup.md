@@ -21,11 +21,11 @@ My setup is as follows:
 * IOS XR device running 7.0.1 (connect via NETCONF)
 * NX-OS device running 9.3.3 (connect via NX-API)
 
-## What Are Nornir and Napalm?
+## What are Nornir and Napalm?
 
 Nornir is an Python-based automation framework that handles the device inventory and keeps track of the collected data. It provides functionality similar to that of Ansible.
 
-NAPALM is a Python-based abstraction layer, that allows actions to be applied against devices running various network operating systems based on intent rather than on vendor-specific commands. It provides abstraction functionality similar to that of Ansible modules.
+NAPALM is a Python-based abstraction layer, that allows actions to be applied against devices running various network operating systems based on intent rather than on vendor-specific commands. It provides abstraction functionality similar to that of Ansible modules. NAPALM uses various backend libraries such as Netmiko and ncclient to handle connections to devices.
 
 ## Nornir Configuration Files
 
