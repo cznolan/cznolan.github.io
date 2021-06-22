@@ -1,25 +1,31 @@
 ---
 layout: post
-title: "Cisco Device Backup With Nornir + Napalm"
+title: "Cisco Device Backup With Nornir + NAPALM"
 date: 2021-06-13 20:30:00 +0800
 tags: cisco backup nornir napalm netmiko xe xr nx-os ios github
 author: cznolan
 ---
-As I regularly use Python when working with files, and Netmiko when programmatically working with Cisco devices, I wanted to try a Python-based device configuration backup solution. I have not yet had the opportunity to test Nornir and Napalm, so I decided to give them a shot rather than sticking with purely Netmiko.
+As I regularly use Python when working with files, and Netmiko when programmatically working with Cisco devices, I wanted to try a Python-based device configuration backup solution. I have not yet had the opportunity to test Nornir and NAPALM, so I decided to give them a shot rather than sticking with purely Netmiko.
 
-This guide will run through the basic setup of Nornir and writing backup files to both a local disk and a GitHub repository. I am going to gloss over the specifics of how Nornir and Napalm work, as there is quite a lot of documentation available.
+This guide will run through the basic setup of Nornir and writing backup files to both a local disk and a GitHub repository. I am going to gloss over the specifics of how Nornir and NAPALM work, as there is quite a lot of documentation available.
 
 My setup is as follows:
 * CentOS 8.4.2105 & Windows 10 21H1
 * Python 3.8.6
-* Napalm 3.3.0
+* NAPALM 3.3.0
 * Netmiko 3.4.0
 * Nornir 3.1.0
-  * Napalm Plugin 0.1.2
+  * NAPALM Plugin 0.1.2
   * Utils Plugin 0.1.2
 * IOS XE device running 16.12.4 (connect via SSH)
 * IOS XR device running 7.0.1 (connect via NETCONF)
 * NX-OS device running 9.3.3 (connect via NX-API)
+
+## What Are Nornir and Napalm?
+
+Nornir is an Python-based automation framework that handles the device inventory and keeps track of the collected data. It provides functionality similar to that of Ansible.
+
+NAPALM is a Python-based abstraction layer, that allows actions to be applied against devices running various network operating systems based on intent rather than on vendor-specific commands. It provides abstraction functionality similar to that of Ansible modules.
 
 ## Nornir Configuration Files
 
@@ -81,7 +87,7 @@ n9k-03:
 
 Groups allow for parameters to be defined across a number of devices. Groups can be nested to allow definition of parameters at a parent level, and have inheritence throughout the nested groups.
 
-In this case I have just adjusted the Napalm connection timeout to 4 seconds (it is around 20 seconds by default), and have defined a few other required parameters such as username/password, and the device platform.
+In this case I have just adjusted the NAPALM connection timeout to 4 seconds (it is around 20 seconds by default), and have defined a few other required parameters such as username/password, and the device platform.
 
 
 ```yaml
@@ -114,7 +120,7 @@ n9kv:
 The first thing I wanted to try was to write my configuration backups to disk.
 
 In the below code I there are a few things worth mentioning:
-* For IOS XE and NX-OS, Napalm can sanitise the password hashes in the configuration file. As this is not supported for IOS XR, I have created two separate tasks to do the required backups.
+* For IOS XE and NX-OS, NAPALM can sanitise the password hashes in the configuration file. As this is not supported for IOS XR, I have created two separate tasks to do the required backups.
 * I have commented out the lines for write-to-file in Windows.
 * We can look in the Python set __nr.data.failed_hosts__ to see which hosts Nornir has failed to backup.
 
@@ -295,7 +301,7 @@ After an initial backup and then configuring the regexes to remove the ever-chan
 
 ## Additional Links
 
-Take a look at the connectivity options available for Napalm, as you may want/need to enable NETCONF or the NX-API on your devices.
+Take a look at the connectivity options available for NAPALM, as you may want/need to enable NETCONF or the NX-API on your devices.
 
 [https://napalm.readthedocs.io/en/stable/support/](https://napalm.readthedocs.io/en/stable/support/){:target="_blank"}
 
