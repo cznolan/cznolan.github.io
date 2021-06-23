@@ -19,9 +19,7 @@ You will need at least SSM On-Prem version 8-202102 to support SLP, which was re
 
 ## Smart Licencing using Policy (SLP)
 
-SLP is configured similar to both the Smart Transport and Cisco Smart Licencing Utility (CSLU) methods, however the name of the virtual account must be appended to the CSLU URI along with _-1_.
-
-If your virtual account is called _myaccount_, your URL would look something like the following.
+SLP is configured similar to both the Smart Transport and Cisco Smart Licencing Utility (CSLU) methods. In the SSM On-Prem web interface, if you navigate to _Smart Licencing > Inventory > General_, you will find some text under the __Product Instance Registration Tokens__ heading which will include a link for the __CSLU Transport URL__. Presumably, you will find the name of the virtual account being managed by SSM On-Prem must be appended to the standard CSLU URI along with _-1_. So, if your virtual account is called _myaccount_, your URL would look something like the following.
 
 _https://ssm-onprem.example/cslu/v1/pi/myaccount-1_
 
