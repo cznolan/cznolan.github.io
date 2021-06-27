@@ -55,7 +55,7 @@ runner:
 
 ### hosts.yaml
 
-This file is self-explanatory and contains all the hosts. In my case I am trying to define as little as possible at this level and define common attributes at the group level. As I do not have DNS running in my lab, I have defined the IP statically. By default the name of the host will be resolved and used for connectivity.
+This file is self-explanatory and contains all the hosts. In my case I am trying to define as little as possible at this level and define common attributes at the group level. As I do not have DNS running in my lab, I have defined the IP statically. The _hostname_ property needs to be defined, as Nornir will not attempt to resolve the name of the host itself.
 
 The last two hosts in the file do not exist in my lab, to help demonstrate that Nornir handles errors.
 
