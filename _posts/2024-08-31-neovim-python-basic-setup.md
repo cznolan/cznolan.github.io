@@ -5,7 +5,7 @@ date: 2024-08-31 18:30:00 +0800
 tags: python neovim nvim lsp pyright wsl
 author: cznolan
 ---
-
+For a while now I have been meaning to come up with a better solution than using Notepad++ for writing Python code on Windows. As I have macOS and Linux at home, I thought I would give Neovim a try.
 
 I'm setting up Neovim within Ubuntu 24.04 running in Windows Subsystem for Linux (WSL2).
 
@@ -30,12 +30,14 @@ npm install -g pyright
 
 ### Lazy
 
-The installation instructions provided for Lazy here are perfectly fine. The only change I have made is removing the habamax colour scheme from the lazy.lua file, as I intend to use Catppuccin.
+The installation instructions provided for Lazy here [https://lazy.folke.io/installation](https://lazy.folke.io/installation) are really all that's needed.
+
 ```lua
 --~/.config/nvim/init.lua
 --
 require("config.lazy")
 ```
+The only change I have made is removing the habamax colour scheme from the lazy.lua file, as I intend to use Catppuccin.
 
 ```lua
 --~/.config/nvim/config/lazy.lua
@@ -75,10 +77,9 @@ require("lazy").setup({
 })
 
 ```
-
 ### Treesitter
 
-Again not much to say here. I've basically just followed the installation instructions for Treesitter here [https://github.com/nvim-treesitter/nvim-treesitter/wiki/Installation](https://github.com/nvim-treesitter/nvim-treesitter/wiki/Installation){:target="_blank"}, and just updated the list of languages I want to have syntax highlighting for.
+Again not much to say here. I've basically just followed the installation instructions for Treesitter here [https://github.com/nvim-treesitter/nvim-treesitter/wiki/Installation](https://github.com/nvim-treesitter/nvim-treesitter/wiki/Installation)
 
 ```lua
 --~/.config/nvim/lua/plugins/treesitter.lua
@@ -90,6 +91,7 @@ return {
     }
 ```
 
+Within init.lua I have just updated the list of languages I want to have syntax highlighting for.
 
 ```lua
 --~/.config/nvim/init.lua
@@ -104,20 +106,27 @@ require("nvim-treesitter.configs").setup({
 
 ### Catppuccin
 
-At this point there should be functional syntax highlighting, however the colour scheme is a bit flat.
+At this point there should be functional syntax highlighting, however the colour scheme is a bit flat. Catppuccin will give a nice colour scheme for all the syntax highlighting and the general interface elements of Neovim.
 
-
-Just note that Lazy may not render using the Catppuccin colour scheme when installing/updating plugins.
+```lua
+--~/.config/nvim/lua/plugins/catppuccin.lua
+--
+return {
+    "catppuccin/nvim", name = "catppuccin", priority = 1000
+    }
+```
+Then it is just a matter of setting the colour scheme in init.lua
 
 ```lua
 --~/.config/nvim/init.lua
 --
 vim.cmd.colorscheme "catppuccin"
 ```
+Just note that Lazy may not render using the Catppuccin colour scheme when installing/updating plugins.
 
 ### Telescope
 
-Provided ripgrep is installed, the Telescope setup is very simple. Just follow the getting started guide here [https://github.com/nvim-telescope/telescope.nvim](https://github.com/nvim-telescope/telescope.nvim){:target="_blank"} to get the necessary plugins using Lazy.
+Provided ripgrep is installed, the Telescope setup is very simple. Just follow the getting started guide here [https://github.com/nvim-telescope/telescope.nvim](https://github.com/nvim-telescope/telescope.nvim) to get the necessary plugins using Lazy.
 
 ```lua
 --~/.config/nvim/lua/plugins/telescope.lua
@@ -155,7 +164,7 @@ return {
     }
 ```
 
-For auto-completion and snippets I have just used what bcampolo has put together here [https://github.com/bcampolo/nvim-starter-kit](https://github.com/bcampolo/nvim-starter-kit){:target="_blank"}
+For auto-completion and snippets I have just used what bcampolo has put together here [https://github.com/bcampolo/nvim-starter-kit](https://github.com/bcampolo/nvim-starter-kit)
 
 ```lua
 --~/.config/nvim/lua/plugins/nvim-cmp.lua
@@ -288,6 +297,8 @@ This is the directory structure of all the files created.
 
 If you think you have massively messed up somewhere and want to start fresh, I'd recommend removing the following three directories and all contents recursively.
 
+```
 ~/.config/nvim
 ~/.local/state/nvim
 ~/.local/share/nvim
+```
