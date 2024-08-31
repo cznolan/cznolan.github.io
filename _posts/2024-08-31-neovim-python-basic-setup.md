@@ -23,7 +23,7 @@ The plugins I am using are:
 
 At time of writing the Ubuntu APT repositories have an older version of Neovim, so I have installed it manually. For grep'ing through files with Telescope, ripgrep needs to be installed.
 
-Pyright language server needs to be installed globally, which I have installed via NPM.
+Pyright needs to be installed globally, which I have installed via NPM.
 
 ```
 sudo apt install ripgrep
