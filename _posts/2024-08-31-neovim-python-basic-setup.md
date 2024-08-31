@@ -1,27 +1,29 @@
 ---
 layout: post
 title: "Basic Neovim Setup for Python"
-date: 2024-08-31 18:30:00 +0800
+date: 2024-08-31 16:30:00 +0800
 tags: python neovim nvim lsp pyright wsl
 author: cznolan
 ---
-For a while now I have been meaning to come up with a better solution than using Notepad++ for writing Python code on Windows. As I have macOS and Linux at home, I thought I would give Neovim a try.
+For a while now I have been meaning to come up with a better solution than using Notepad++ for writing Python code on Windows. As I have macOS and Linux at home, I thought I would give Neovim a try as I can use it across all three platforms.
 
-I'm setting up Neovim within Ubuntu 24.04 running in Windows Subsystem for Linux (WSL2).
+Many of the guides I have looked at online on setting up Neovim are no more than "clone this repo and you are done". I wanted to try and set it up a little more modularly and manually so that it is simple for me to enable and disable features. I've gone for a semi-distributed file structure with most of my config in init.lua, but my plugins imported separately. I found setups with fully-distributed files a little too chaotic, but I might move to that type of structure when I have truly figured out how I like Neovim to be setup.
 
-The plugins I am using are: 
-* Lazy for plugin management. 
-* Mason for LSP/tools management. 
+I'm running Neovim within Ubuntu 24.04 on Windows Subsystem for Linux (WSL2), as opposed to running it natively in Windows.
+
+The plugins I am using are:
+* Lazy for plugin management.
+* Mason for LSP/tools management.
 * Pyright as the language server.
-* Treesitter for syntax highlighting. 
-* Telescope for fuzzy finding. 
+* Treesitter for syntax highlighting.
+* Telescope for fuzzy finding.
 * Catppuccin for colour scheme.
 
 ## External Dependencies
 
 At time of writing the Ubuntu APT repositories have an older version of Neovim, so I have installed it manually. For grep'ing through files with Telescope, ripgrep needs to be installed.
 
-Pyright needs to be installed as well, which I have done via NPM.
+Pyright language server needs to be installed globally, which I have installed via NPM.
 
 ```
 sudo apt install ripgrep
@@ -30,13 +32,14 @@ npm install -g pyright
 
 ### Lazy
 
-The installation instructions provided for Lazy here [https://lazy.folke.io/installation](https://lazy.folke.io/installation) are really all that's needed.
+The installation instructions provided for Lazy here [https://lazy.folke.io/installation](https://lazy.folke.io/installation) are really all that is needed.
 
 ```lua
 --~/.config/nvim/init.lua
 --
 require("config.lazy")
 ```
+
 The only change I have made is removing the habamax colour scheme from the lazy.lua file, as I intend to use Catppuccin.
 
 ```lua
@@ -77,9 +80,10 @@ require("lazy").setup({
 })
 
 ```
+
 ### Treesitter
 
-Again not much to say here. I've basically just followed the installation instructions for Treesitter here [https://github.com/nvim-treesitter/nvim-treesitter/wiki/Installation](https://github.com/nvim-treesitter/nvim-treesitter/wiki/Installation)
+Again not much to say here. I've just followed the installation instructions for Treesitter here [https://github.com/nvim-treesitter/nvim-treesitter/wiki/Installation](https://github.com/nvim-treesitter/nvim-treesitter/wiki/Installation)
 
 ```lua
 --~/.config/nvim/lua/plugins/treesitter.lua
@@ -257,7 +261,7 @@ return {
  }
 ```
 
-I then just needed to update init.lua to enable Mason and Pyright.
+Then just update init.lua to enable Mason and Pyright.
 
 ```lua
 --~/.config/nvim/init.lua
