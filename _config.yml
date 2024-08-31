@@ -6,6 +6,8 @@ title: cznolan
 #baseurl: ""
 #url: ""
 github_username: cznolan
-theme: jekyll-theme-minimal
+theme: minima
+minima:
+  skin: dark
 #exclude:
 #  - README.md
