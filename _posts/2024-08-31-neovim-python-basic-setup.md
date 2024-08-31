@@ -157,6 +157,8 @@ It should now be possible to find files and grep through the contents of those f
 
 ### Language Server
 
+I have put together a single plugin file to install both Mason and the lspconfig plugins needed to enable Pyright.
+
 ```lua
 --~/.config/nvim/lua/plugins/lspconfig.lua
 --
@@ -261,7 +263,7 @@ return {
  }
 ```
 
-Then just update init.lua to enable Mason and Pyright.
+Then just update init.lua to enable Mason and Pyright. It's important that they are enabled in the correct order - first mason, second mason-lspconfig, finally any language servers.
 
 ```lua
 --~/.config/nvim/init.lua
@@ -305,4 +307,36 @@ If you think you have massively messed up somewhere and want to start fresh, I'd
 ~/.config/nvim
 ~/.local/state/nvim
 ~/.local/share/nvim
+```
+
+### Final-state init.lua
+
+For simplicity here is how my init.lua looks once all of the above is complete.
+
+```lua
+require("config.lazy")
+
+vim.cmd.colorscheme "catppuccin"
+
+require("nvim-treesitter.configs").setup({
+    ensure_installed = {"bash", "lua", "python", "xml", "json"},
+    sync_install = false,
+    highlight = { enable = true},
+    indent = {enable = true},
+    })
+
+require("mason").setup()
+require("mason-lspconfig").setup({ ensure_installed = { "pyright" }, })
+
+require "lspconfig".pyright.setup({
+    on_attach = on_attach,
+    filetypes = { "python" },
+    settings = { pyright = { autoImportCompletion = true, }, }
+    })
+
+local builtin = require('telescope.builtin')
+vim.keymap.set('n', '<leader>ff', builtin.find_files, {})
+vim.keymap.set('n', '<leader>fg', builtin.live_grep, {})
+vim.keymap.set('n', '<leader>fb', builtin.buffers, {})
+vim.keymap.set('n', '<leader>fh', builtin.help_tags, {})
 ```
