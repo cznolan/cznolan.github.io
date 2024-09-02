@@ -21,13 +21,17 @@ The plugins I am using are:
 
 ## External Dependencies
 
-At time of writing the Ubuntu APT repositories have an older version of Neovim, so I have installed it manually. For grep'ing through files with Telescope, ripgrep needs to be installed.
-
-Pyright needs to be installed globally, which I have installed via NPM.
+At time of writing the Ubuntu APT repositories have an older version of Neovim, so I have installed it manually. For grep'ing through files with Telescope, ripgrep needs to be installed. I'm using NPM to install Pyright. Similar to Neovim, the Ubuntu APT repository has an older version, so I am manually updating it afterwards.
 
 ```
-sudo apt install ripgrep
-npm install -g pyright
+sudo apt install ripgrep npm
+sudo npm install -g npm@latest
+```
+
+At this point I restarted WSL to make sure the latest version of NPM is running, and then installed Pyright.
+
+```
+sudo npm install -g pyright
 ```
 
 ### Lazy
